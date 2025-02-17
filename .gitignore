@@ -26,6 +26,7 @@
 .env.production
 /node_modules/
 /build/
+/public
 
 # Ignore Vagrant files
 .vagrant/

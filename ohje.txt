@@ -1,0 +1,30 @@
+
+Päivitysohje:
+
+Pysäytä masto:
+
+sudo systemctl restart mastodon-streaming mastodon-sidekiq mastodon-web
+
+katso upgrade notesit https://github.com/mastodon/mastodon/releases/
+
+Huom: Käytetään branchia custom_2025 jossa merkkirajamuutos.
+
+git fetch
+git merge vx.x.x
+
+bundle install
+yarnpkg install --frozen-lockfile
+
+JOS tulee herjaa rbenvstä (esim rbenv: version `3.2.3' is not installed (set by /home/mastodon/live/.ruby-version) )
+
+git -C /home/mastodon/.rbenv/plugins/ruby-build pull
+rbenv install 3.2.3
+
+ja yritä uudelleen.
+
+Toinen ehkä parantava temppu:
+bundle install --force
+
+Restarttaus:
+
+sudo systemctl restart mastodon-streaming mastodon-sidekiq mastodon-web
