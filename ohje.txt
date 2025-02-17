@@ -3,7 +3,7 @@ Päivitysohje:
 
 Pysäytä masto:
 
-sudo systemctl restart mastodon-streaming mastodon-sidekiq mastodon-web
+sudo systemctl stop mastodon-streaming mastodon-sidekiq-*@.service mastodon-web
 
 katso upgrade notesit https://github.com/mastodon/mastodon/releases/
 
@@ -27,4 +27,13 @@ bundle install --force
 
 Restarttaus:
 
-sudo systemctl restart mastodon-streaming mastodon-sidekiq mastodon-web
+sudo systemctl restart mastodon-streaming mastodon-sidekiq-*@.service mastodon-web
+
+
+Käytössä seuraavat sideqick servicet:
+- mastodon-sidekiq-push@30.service
+- mastodon-sidekiq-pull@30.service
+- mastodon-sidekiq-ingress@30.service
+- mastodon-sidekiq-mailers@15.service
+- mastodon-sidekiq-scheduler@30.service
+
