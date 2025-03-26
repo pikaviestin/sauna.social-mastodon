@@ -1,6 +1,8 @@
 
 Päivitysohje:
 
+Valmistele pävitetty branch, mikäli kyseessä v4.3.x niin branch on stable-4.3, tämän päivitys on helppo tehdä Githubin web kälin kautta "sync fork".
+
 Pysäytä masto:
 
 sudo systemctl stop mastodon-streaming mastodon-sidekiq-*@.service mastodon-web
@@ -9,8 +11,8 @@ katso upgrade notesit https://github.com/mastodon/mastodon/releases/
 
 Huom: Käytetään branchia custom_2025 jossa merkkirajamuutos.
 
-git fetch
-git merge vx.x.x
+git pull
+git merge stable-4.3
 
 bundle install
 yarnpkg install --frozen-lockfile
