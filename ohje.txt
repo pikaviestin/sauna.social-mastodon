@@ -12,7 +12,7 @@ katso upgrade notesit https://github.com/mastodon/mastodon/releases/
 Huom: Käytetään branchia custom_2025 jossa merkkirajamuutos.
 
 git pull
-git merge stable-4.3
+git merge origin/stable-4.3.x
 
 bundle install
 yarnpkg install --frozen-lockfile
@@ -25,7 +25,7 @@ rbenv install 3.2.3
 ja yritä uudelleen.
 
 Toinen ehkä parantava temppu:
-bundle install --force
+bundle install --redownload
 
 Restarttaus:
 
